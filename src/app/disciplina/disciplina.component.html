@@ -1,0 +1,8 @@
+<div class="content card">
+    <h4>Cadastro de Disciplinas</h4>
+  
+    <input (keyup.enter)="cadastrar()" type="text" id="nome" name="nome" [(ngModel)]="novaDisciplina.nome" placeholder="Digite a sua posição">
+  
+    <div class="button-container">
+      <button [disabled]="!novaDisciplina.nome" (click)="cadastrar()">CADASTRAR</button>
+    </div>

@@ -1,5 +1,5 @@
 h4 {
-    color: #C42C27;
+    color: #1E1916;
 }
 
 .content {
@@ -23,15 +23,15 @@ input {
 
 button {
     background: #1E1916;
-    border: 1px solid #C42C27;
+    border: 1px solid #1E1916;
     padding: 15px;
-    color: #C42C27;
+    color: #1E1916;
     padding-left: 25px;
     padding-right: 25px;
 }
 
 button:hover {
-    background: #C42C27;
+    background: #1E1916;
     color: #1E1916;
     cursor: pointer;
 }
@@ -42,7 +42,8 @@ button:hover {
 }
 
 table {
-    width: 100%;
+    width: 60%;
+    margin-left: 25%;
 }
 
 td, th {
@@ -54,8 +55,8 @@ tr:nth-child(even) {
 }
 
 th {
-    background: #C42C27;
-    color: #1E1916;
+    background: #1E1916;
+    color: #FFFFFF;
     border: 2px solid;
 }
 
@@ -67,7 +68,7 @@ button:disabled {
 }
 
 a {
-    background: #F7392E;
+    background: #1E1916;
     text-align: center;
     display: -webkit-inline-box;
     padding: 5px;
@@ -82,21 +83,21 @@ img {
 
 .remove-parent i {
     text-align: center;
-    color: #1E1916;
+    color: white;
 }
 
 .edit-parent {
     margin-right: 8px;
-    background-color: #C42C27;
+    background-color: #1E1916;
 }
 
 table input {
     border: 1px solid;
     padding-left: 8px;
-    background: #1E1916;
+    background: white;
 }
 
 .confirm-parent {
     margin-right: 8px;
-    background: #C42C27;
+    background: #1E1916;
 }

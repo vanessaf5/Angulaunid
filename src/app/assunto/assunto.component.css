@@ -1,5 +1,5 @@
 h4 {
-    color: #C42C27;
+    color: #1E1916;
 }
 
 .content {
@@ -10,7 +10,7 @@ h4 {
 }
 
 .card {
-   box-shadow: 0 4px 8px 0 #1E1916;
+    box-shadow: 0 4px 8px 0 #1E1916;
     transition: 0.3s;
 }
 
@@ -23,15 +23,15 @@ input {
 
 button {
     background: #1E1916;
-    border: 1px solid #C42C27;
+    border: 1px solid #1E1916;
     padding: 15px;
-    color: #C42C27;
+    color:  #ddd;
     padding-left: 25px;
     padding-right: 25px;
 }
 
 button:hover {
-    background: #C42C27;
+    background: #1E1916;
     color: #1E1916;
     cursor: pointer;
 }
@@ -42,8 +42,7 @@ button:hover {
 }
 
 table {
-    width: 60%;
-    margin-left: 25%;
+    width: 100%;
 }
 
 td, th {
@@ -55,7 +54,7 @@ tr:nth-child(even) {
 }
 
 th {
-    background: #C42C27;
+    background: #1E1916;
     color: #1E1916;
     border: 2px solid;
 }
@@ -68,7 +67,7 @@ button:disabled {
 }
 
 a {
-    background: #F7392E;
+    background: #1E1916;
     text-align: center;
     display: -webkit-inline-box;
     padding: 5px;
@@ -83,21 +82,21 @@ img {
 
 .remove-parent i {
     text-align: center;
-    color: white;
+    color: #1E1916;
 }
 
 .edit-parent {
     margin-right: 8px;
-    background-color: #C42C27;
+    background-color: #1E1916;
 }
 
 table input {
     border: 1px solid;
     padding-left: 8px;
-    background: white;
+    background: #1E1916;
 }
 
 .confirm-parent {
     margin-right: 8px;
-    background: #C42C27;
+    background: #1E1916;
 }

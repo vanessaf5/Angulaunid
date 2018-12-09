@@ -1,0 +1,46 @@
+<div *ngIf="carregando" class="progress">
+  <div class="indeterminate"></div>
+</div>
+
+<h6 *ngIf="!Disciplina && carregando">Não há Disciplinas cadastrados</h6>
+
+<div *ngIf="!carregando">
+  <h6 align="center">Disciplinas cadastrados</h6>
+
+  <table> 
+    <thead>
+      <tr>
+        <th>Nome</th>
+      
+
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let disciplina of disciplinas">
+       
+          <td>
+            <span *ngIf="!disciplina.editando">{{disciplina.nome}}</span>
+            <input *ngIf="disciplina.editando" type="text" [(ngModel)]="disciplina.nome" name="nome-{{disciplina.uid}}">
+          </td>
+          
+          <td *ngIf="!disciplina.editando" class="remove-parent">
+          <a class="edit-parent" (click)="editar(disciplina)" href="javascript:void(0);">
+            <i class="material-icons">edit</i>
+          </a>
+          <a (click)="remover(disciplina.uid)" href="javascript:void(0);">
+            <i class="material-icons">delete</i>
+          </a>
+        </td>
+        <td *ngIf="disciplina.editando" class="remove-parent">
+            <a class="confirm-parent" (click)="confirmEdit(disciplina)" href="javascript:void(0);">
+              <i class="material-icons">check</i>
+            </a>
+            <a (click)="cancelEdit(disciplina)" href="javascript:void(0);">
+              <i class="material-icons">close</i>
+            </a>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

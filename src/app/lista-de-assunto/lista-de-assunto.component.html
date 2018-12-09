@@ -1,0 +1,47 @@
+<div *ngIf="carregando" class="progress">
+  <div class="indeterminate"></div>
+</div>
+
+<h6 *ngIf="!Assunto && carregando">Não há Assuntos cadastrados</h6>
+
+<div *ngIf="!carregando">
+  <h6 align="center">Assuntos cadastrados</h6>
+
+  <table> 
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Disciplina</th>
+             <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let assunto of assuntos">
+        <td>
+          <span *ngIf="!assunto.editando">{{assunto.nome}}</span>
+              <input *ngIf="assunto.editando" type="text" [(ngModel)]="assunto.nome" name="nome-{{assunto.uid}}">
+         </td>
+         <td>
+          <span *ngIf="!assunto.editando">{{assunto.disciplina}}</span>
+          <input *ngIf="assunto.editando" type="text" [(ngModel)]="assunto.disciplina" name="disciplina-{{assunto.uid}}">
+        </td>
+          <td *ngIf="!assunto.editando" class="remove-parent">
+          <a class="edit-parent" (click)="editar(assunto)" href="javascript:void(0);">
+            <i class="material-icons">edit</i>
+          </a>
+          <a (click)="remover(assunto.uid)" href="javascript:void(0);">
+            <i class="material-icons">delete</i>
+          </a>
+        </td>
+        <td *ngIf="assunto.editando" class="remove-parent">
+            <a class="confirm-parent" (click)="confirmEdit(assunto)" href="javascript:void(0);">
+              <i class="material-icons">check</i>
+            </a>
+            <a (click)="cancelEdit(assunto)" href="javascript:void(0);">
+              <i class="material-icons">close</i>
+            </a>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

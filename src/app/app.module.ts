@@ -9,33 +9,34 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { JogadorComponent } from './jogador/jogador.component';
-import { ListaDejogadoresComponent } from './lista-dejogadores/lista-dejogadores.component';
+import { DisciplinaComponent } from './disciplina/disciplina.component';
+import { ListaDeDisciplinaComponent } from './lista-de-disciplina/lista-de-disciplina.component';
 import { DBService } from './servicos/db.service';
 
-import { ListaDeUniformeComponent } from './lista-de-uniforme/lista-de-uniforme.component';
-import { UniformeComponent } from './uniforme/uniforme.component';
+import { ListaDeAssuntoComponent } from './lista-de-assunto/lista-de-assunto.component';
+import { AssuntoComponent } from './assunto/assunto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JogadorComponent,
-    ListaDejogadoresComponent,
+    DisciplinaComponent,
+    ListaDeDisciplinaComponent,
     
-    ListaDeUniformeComponent,
+    ListaDeAssuntoComponent,
     
-    UniformeComponent
+    AssuntoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.
+      firebase),
     RouterModule.forRoot([
-      { path: 'jogador', component: JogadorComponent },
-      { path: 'listaDejogadores', component: ListaDejogadoresComponent },
-      { path: 'uniforme', component: UniformeComponent },
-      { path: 'listaDeUniforme', component: ListaDeUniformeComponent }
+      { path: 'disciplina', component: DisciplinaComponent },
+      { path: 'listaDeDisciplinas', component: ListaDeDisciplinaComponent },
+      { path: 'assunto', component: AssuntoComponent },
+      { path: 'listaDeAssunto', component: ListaDeAssuntoComponent }
     ])
   ],
   providers: [AngularFireDatabase,DBService],

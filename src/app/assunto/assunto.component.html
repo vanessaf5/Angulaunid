@@ -1,0 +1,9 @@
+<div class="content card">
+    <h4>Cadastro de Assunto</h4>
+  
+    <input type="text" id="nome" name="nome" [(ngModel)]="novoAssunto.nome" placeholder="Digite o Assunto">
+    <input type="text" id="disciplina" name="disciplina" [(ngModel)]="novoAssunto.disciplina" placeholder="Digite o nome da disciplina">
+  
+    <div class="button-container">
+      <button [disabled]="!novoAssunto.nome || !novoAssunto.disciplina" (click) ="cadastrar()">CADASTRAR</button>
+    </div>

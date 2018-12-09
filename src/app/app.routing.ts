@@ -1,15 +1,15 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {JogadorComponent} from './jogador/jogador.component';
-import {ListaDejogadoresComponent} from './lista-dejogadores/lista-dejogadores.component';
-import { UniformeComponent } from './uniforme/uniforme.component';
+import { DisciplinaComponent} from './disciplina/disciplina.component';
+import {ListaDeDisciplinaComponent} from './lista-de-disciplina/lista-de-disciplina.component';
+import { AssuntoComponent } from './assunto/assunto.component';
 
-import { ListaDeUniformeComponent } from './lista-de-uniforme/lista-de-uniforme.component';
+import { ListaDeAssuntoComponent } from './lista-de-assunto/lista-de-assunto.component';
 const APP_ROUTES: Routes =[
-    {path : 'jogador', component:JogadorComponent},
-    {path : 'lista-dejogadores', component:ListaDejogadoresComponent},
-    {path : 'uniforme', component:UniformeComponent},
+    {path : 'disciplina', component:DisciplinaComponent},
+    {path : 'listaDeDisciplina', component:ListaDeDisciplinaComponent},
+    {path : 'assunto', component:AssuntoComponent},
     
-    {path : 'listaDeUniforme', component:ListaDeUniformeComponent}
+    {path : 'listaDeAssunto', component:ListaDeAssuntoComponent}
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
